@@ -3,6 +3,7 @@ package com.example.kotlindemo
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.kotlindemo.grammar.circular.CircularActivity
 import com.example.kotlindemo.navigation.NavigationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -13,6 +14,9 @@ class MainActivity : AppCompatActivity() {
 
         navigationDemo?.setOnClickListener {
             startActivity(Intent(this, NavigationActivity::class.java))
+        }
+        circularDemo?.setOnClickListener {
+            startActivity(Intent(this, CircularActivity::class.java))
         }
     }
 }
