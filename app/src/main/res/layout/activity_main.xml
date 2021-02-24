@@ -28,7 +28,15 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:paddingLeft="16dp"
-        android:text="@string/navigation"
+        android:text="循环"
+        android:gravity="center_vertical" />
+
+    <TextView
+        android:id="@+id/selectDemo"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:paddingLeft="16dp"
+        android:text="选择"
         android:gravity="center_vertical" />
 
 </LinearLayout>
