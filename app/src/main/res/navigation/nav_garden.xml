@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_garden"
+    app:startDestination="@id/navigation_fragment_menu1">
+
+    <fragment
+        android:id="@+id/navigation_fragment_menu1"
+        android:name="com.example.kotlindemo.navigation.fragments.Menu1Fragment"
+        android:label="navigation_menu_1"
+        tools:layout="@layout/navigation_fragment_menu1" >
+        <action
+            android:id="@+id/action_menu1_to_menu2"
+            app:destination="@+id/navigation_fragment_menu2" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_fragment_menu2"
+        android:name="com.example.kotlindemo.navigation.fragments.Menu2Fragment"
+        android:label="navigation_fragment_menu_2"
+        tools:layout="@layout/navigation_fragment_menu2" >
+        <action
+            android:id="@+id/action_navigation_fragment_menu2_to_navigation_fragment_next_menu2"
+            app:destination="@id/navigation_fragment_next_menu2" />
+        <action
+            android:id="@+id/action_navigation_fragment_menu2_to_navigation_fragment_menu1"
+            app:destination="@id/navigation_fragment_menu1" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_fragment_next_menu2"
+        android:name="com.example.kotlindemo.navigation.fragments.Menu2NextFragment"
+        android:label="navigation_fragment_next_menu_2"
+        tools:layout="@layout/navigation_fragment_next_menu2" >
+        <action
+            android:id="@+id/action_navigation_fragment_next_menu2_to_navigation_fragment_menu2"
+            app:destination="@id/navigation_fragment_menu2" />
+    </fragment>
+
+</navigation>
